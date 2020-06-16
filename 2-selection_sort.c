@@ -8,30 +8,24 @@
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t b, pos, i;
-	int min, tmp;
+	size_t i, p, min;
+	int tmp = 0;
 
-	while (b < size)
+	for (i = 0; i < size; i++)
 	{
-		i = b;
-		min = array[b];
-		pos = b;
-		while (i < size)
+		min = i;
+		for (p = i + 1; p < size; p++)
 		{
-			if (array[i] < min)
-			{
-				min = array[i];
-				pos = i;
-			}
-			i++;
+			if (array[p] < array[min])
+				min = p;
 		}
-		if (pos != b)
+
+		if (min != i)
 		{
-			tmp = array[b];
-			array[b] = array[pos];
-			array[pos] = tmp;
+			tmp = array[i];
+			array[i] = array[tmp];
+			array[min] = tmp;
 			print_array(array, size);
 		}
-		b++;
 	}
 }
