@@ -57,12 +57,12 @@ void quick_lomuto(int *array, int low, int high, size_t size)
 }
 
 /**
- * _sort_ - sorts an array of integer
+ * quick_sort - sorts an array of integer
  * @array: variable
  * @size: variable
  * Return: 0
  */
-void _sort_(int *array, size_t size)
+void quick_sort(int *array, size_t size)
 {
 	quick_lomuto(array, 0, size - 1, size);
 }
