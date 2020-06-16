@@ -43,7 +43,7 @@ void shell_sort(int *array, size_t size)
 	{
 		for (p = i; p < size; p++)
 		{
-			for (q = i; q >= i && array[q] < array[q - i]; q -= i)
+			for (q = p; q >= i && array[q] < array[q - i]; q -= i)
 			{
 				_swap_(array, q, q - i);
 			}
