@@ -16,7 +16,7 @@ void _swap_(int *array, int i, int p)
 	{
 		tmp = array[i];
 		array[i] = array[p];
-		array[i] = tmp;
+		array[p] = tmp;
 	}
 }
 
