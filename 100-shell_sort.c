@@ -1,11 +1,10 @@
 #include "sort.h"
 
 /**
- * partition - put a pivot
- * @array: variable
- * @size: variable
- * @low: varible
- * @high: variable
+ * _swap_ - It will swap two values
+ * @i: variable
+ * @p: variable
+ * @array: varriable
  * Return: 0
  */
 void _swap_(int *array, int i, int p)
@@ -21,11 +20,9 @@ void _swap_(int *array, int i, int p)
 }
 
 /**
- * partition - put a pivot
+ * shell_sort - Will sort a list
  * @array: variable
  * @size: variable
- * @low: varible
- * @high: variable
  * Return: 0
  */
 void shell_sort(int *array, size_t size)
